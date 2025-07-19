@@ -1,8 +1,15 @@
 # 🔓 VulnerableLoginApp – SQL Injection Demo using Flask
 
-This is a **basic Flask login application** designed to demonstrate **SQL Injection (SQLi)** vulnerability and how to fix it using **parameterized queries**.
+A simple yet powerful **Flask-based login app** designed to **demonstrate SQL Injection (SQLi)** vulnerabilities and how to prevent them using **parameterized queries**.
 
-⚠️ **This app is for educational purposes only. Do NOT use this in production.**
+> ⚠️ **Educational Use Only!**  
+Do NOT use this app in production environments.
+
+---
+
+![python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge)
+![flask](https://img.shields.io/badge/Flask-SQLi--Demo-yellow?style=for-the-badge)
+![sql-injection](https://img.shields.io/badge/SQL-Injection-critical?style=for-the-badge)
 
 ---
 
@@ -12,9 +19,9 @@ This is a **basic Flask login application** designed to demonstrate **SQL Inject
 
 VulnerableLoginApp/
 ├── app.py          # ❌ Vulnerable Login App (with SQL Injection)
-├── secureapp.py    # ✅ Secure Login App (with parameterized queries)
-├── init_db.py      # DB Initialization script
-├── users.db        # SQLite3 Database
+├── secureapp.py    # ✅ Secure Login App (parameterized queries)
+├── init\_db.py      # 🔧 DB Initialization script
+├── users.db        # 📦 SQLite3 Database file
 
 ````
 
@@ -23,9 +30,10 @@ VulnerableLoginApp/
 ## ⚙️ Requirements
 
 - Python 3.x
-- Flask
+- Flask (`pip install flask`)
 
-### ✅ Install Flask:
+### 🔧 Install Flask:
+
 ```bash
 pip install flask
 ````
@@ -47,59 +55,70 @@ cd VulnerableLoginApp
 python init_db.py
 ```
 
-This will create a file called `users.db` with sample user data.
+✅ This will create a `users.db` SQLite database with sample credentials.
 
 ---
 
-## 🔴 To Run the Vulnerable Version:
+## 🔴 Run the Vulnerable Version (Demo SQLi)
 
 ```bash
 python app.py
 ```
 
-🧨 **Try Logging in with this payload:**
+🧨 Try logging in with:
 
 * **Username:** `' OR '1'='1`
 * **Password:** `anything`
 
-> You'll bypass login without valid credentials — classic SQL Injection!
+> ✅ Login will bypass without real credentials.
+> 💣 This is a live demonstration of classic SQL Injection.
 
 ---
 
-## ✅ To Run the Secure Version:
+## ✅ Run the Secure Version
 
 ```bash
 python secureapp.py
 ```
 
-✅ This version uses **parameterized queries** to prevent SQL injection attacks.
+✅ This version uses **parameterized queries** to block SQL injection.
 
 ---
 
-## 🔐 Secure Code Snippet (Parameterized Query):
+## 🛡️ Secure Code Snippet (Defense)
 
 ```python
 cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
 ```
 
----
-
-## 📸 Screenshots (Optional)
-
-<img width="807" height="528" alt="image" src="https://github.com/user-attachments/assets/8133dc12-4499-4372-bc02-8ff8951a4f0f" />
-
+This prevents user input from interfering with the SQL query logic.
 
 ---
 
-## 📚 Educational Purpose Only
+## 📸 Screenshot
 
-This repo is built by [Anil Yadav](https://github.com/CyberGuard-Anil) for **learning & teaching** SQL Injection in a practical way.
+> (Optional: Replace with your own image or demo GIF)
 
-Please use responsibly. 🙏
+<img width="807" height="528" alt="image" src="https://github.com/user-attachments/assets/deea0371-5af3-4d9d-832b-50bdabe6f867" />
 
 ---
 
-## 📄 License
+## 📚 Educational Use Only
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is built by [Anil Yadav](https://github.com/CyberGuard-Anil)
+For use in **cybersecurity training**, **ethical hacking**, and **demo labs**.
+
+Please use responsibly and ethically. 🙏
+
+---
+
+## 📜 License
+
+Licensed under the [MIT License](LICENSE)
+
+---
+
+> 👨‍💻 Learn Vulnerabilities | 💡 Practice Secure Coding | 🔐 Stay Ethical
+> **Happy Hacking!**
+
 
