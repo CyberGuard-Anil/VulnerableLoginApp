@@ -13,7 +13,7 @@ This is a **basic Flask login application** designed to demonstrate **SQL Inject
 VulnerableLoginApp/
 ├── app.py          # ❌ Vulnerable Login App (with SQL Injection)
 ├── secureapp.py    # ✅ Secure Login App (with parameterized queries)
-├── init\_db.py      # DB Initialization script
+├── init_db.py      # DB Initialization script
 ├── users.db        # SQLite3 Database
 
 ````
@@ -37,7 +37,7 @@ pip install flask
 ### 🔹 Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/VulnerableLoginApp.git
+git clone https://github.com/CyberGuard-Anil/VulnerableLoginApp.git
 cd VulnerableLoginApp
 ```
 
@@ -86,13 +86,14 @@ cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (usern
 
 ## 📸 Screenshots (Optional)
 
-*You can add screenshots here of both login pages and SQLi results*
+<img width="807" height="528" alt="image" src="https://github.com/user-attachments/assets/8133dc12-4499-4372-bc02-8ff8951a4f0f" />
+
 
 ---
 
 ## 📚 Educational Purpose Only
 
-This repo is built by [Anil Yadav](https://github.com/anilyadav-cyber) for **learning & teaching** SQL Injection in a practical way.
+This repo is built by [Anil Yadav](https://github.com/CyberGuard-Anil) for **learning & teaching** SQL Injection in a practical way.
 
 Please use responsibly. 🙏
 
