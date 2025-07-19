@@ -97,7 +97,6 @@ This prevents user input from interfering with the SQL query logic.
 
 ## 📸 Screenshot
 
-> (Optional: Replace with your own image or demo GIF)
 
 <img width="807" height="528" alt="image" src="https://github.com/user-attachments/assets/deea0371-5af3-4d9d-832b-50bdabe6f867" />
 
