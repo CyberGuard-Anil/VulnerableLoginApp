@@ -20,7 +20,7 @@ Do NOT use this app in production environments.
 VulnerableLoginApp/
 ├── app.py          # ❌ Vulnerable Login App (with SQL Injection)
 ├── secureapp.py    # ✅ Secure Login App (parameterized queries)
-├── init\_db.py      # 🔧 DB Initialization script
+├── init_db.py      # 🔧 DB Initialization script
 ├── users.db        # 📦 SQLite3 Database file
 
 ````
