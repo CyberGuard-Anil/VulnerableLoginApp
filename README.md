@@ -91,7 +91,7 @@ python secureapp.py
 cursor.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
 ```
 
-This prevents user input from interfering with the SQL query logic.
+This prevents user input from interfering with the SQL query logic!
 
 ---
 
